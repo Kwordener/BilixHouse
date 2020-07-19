@@ -9,9 +9,8 @@
   font-style: normal;
 }
 .section01 {
+  /* this will be an img eventually*/
   background: rgba(51, 62, 90, .75);
-  top: 0px;
-  left: 0px;
 }
 body{
   margin: 0px;
@@ -34,7 +33,6 @@ body{
   font: var(--main-font);
   font-size: 36px;
   color: white;
-  margin: 25px 0 0 50px
 }
 #logo02 {
   color: var(--green-font-color);
@@ -46,14 +44,23 @@ body{
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 768px 716px 919px 963px 601px 657px 334px;
+} 
+/*.container {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+} not sure if i should use flex or grid yet for the main structure */
+.header01 {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  padding: 0 5% 0 5%;
 }
 .topnav {
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  padding: 5px;
-  float: right;
-  margin: 20px 50px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 /* ====================================================================================================
@@ -68,11 +75,42 @@ body{
   border: 0px;
 }
 .topnavcomp {
-  padding: 15px;
+  padding: 15px 30px;
 }
-#find {
+.topnavcomp:link {
+  color: white;
+  text-decoration: none;
+}
+.topnavcomp:visited {
+  color: white;
+  text-decoration: none;
+}
+.topnavcomp:hover {
+  color: white;
+  text-decoration: none;
+}
+.topnavcomp:active {
+  color: white;
+  text-decoration: none;
+}
+#welcome {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font: var(--main-font);
+  font-size: 72px;
+  font-weight: 900;
+  width: 100%;
+  padding: 150px 0 0 0;
+}
+#form02 {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+#find {
   color: white;
   background-color: var(--green-font-color);
   font: var(--main-font);
@@ -81,13 +119,9 @@ body{
   padding: 15px 20px;
   border: 0px;
 }
-#welcome {
-  display: flex;
-  position: relative;
-  align-items: center;
-  color: white;
-  font: var(--main-font);
-  font-size: 72px;
-  font-weight: 900;
-  width: 100%;
+#rectangle01 {
+  height: 5px;
+  border: 5px;
+  background-color: var(--green-font-color);
+  width: 40px;
 }
