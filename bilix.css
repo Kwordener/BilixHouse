@@ -1,0 +1,93 @@
+/* ====================================================================================================
+    1. Global
+======================================================================================================= */
+@font-face {
+  font-family: 'proxima_novaregular';
+  src: url('proximanova-regular-webfont.woff2') format('woff2'),
+       url('proximanova-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.section01 {
+  background: rgba(51, 62, 90, .75);
+  top: 0px;
+  left: 0px;
+}
+body{
+  margin: 0px;
+}
+/* ====================================================================================================
+    2. Custom Variables
+======================================================================================================= */
+:root {
+  --green-font-color: #25E39A;
+}
+:root {
+  --main-font: 'proxima_novaregular';
+}
+/* ====================================================================================================
+    3. Typography
+======================================================================================================= */
+#logo01 {
+  display: inline-flex;
+  position: relative;
+  font: var(--main-font);
+  font-size: 36px;
+  color: white;
+  margin: 25px 0 0 50px
+}
+#logo02 {
+  color: var(--green-font-color);
+}
+/* ====================================================================================================
+    4. Grid System
+======================================================================================================= */
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 768px 716px 919px 963px 601px 657px 334px;
+}
+.topnav {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  padding: 5px;
+  float: right;
+  margin: 20px 50px 0 0;
+}
+
+/* ====================================================================================================
+    5. Components
+======================================================================================================= */
+#sign {
+  color: white;
+  background-color: var(--green-font-color);
+  font: var(--main-font);
+  font-weight: normal;
+  padding: 10px 15px;
+  border: 0px;
+}
+.topnavcomp {
+  padding: 15px;
+}
+#find {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: var(--green-font-color);
+  font: var(--main-font);
+  font-weight: bold;
+  font-size: 24px;
+  padding: 15px 20px;
+  border: 0px;
+}
+#welcome {
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: white;
+  font: var(--main-font);
+  font-size: 72px;
+  font-weight: 900;
+  width: 100%;
+}
