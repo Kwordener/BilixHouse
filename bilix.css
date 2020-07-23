@@ -5,6 +5,7 @@
 /*** variables **/
 :root {
   --green: #25E39A;
+  --blue: #6DA2FF;
   --font-normal: 'proxima_novaregular', sans-serif;
   --font-bold:'proxima_novabold', sans-serif;
   --font-boldx2: 'proxima_novaextrabold', sans-serif;
@@ -149,7 +150,66 @@ nav ul li a:active {
 }
 
 /********************************************************************************
- 3. Components
+ 3. Footer
+*******************************************************************************/
+.footer-container {
+  background-color: #333E5A;
+  font-family: var(--font-normal);
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__nav {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 200px;
+}
+
+.footer__nav ul {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0;
+  margin: 0;
+}
+
+.footer__nav a:link,
+.footer__nav a:visited,
+.footer__nav a:hover,
+.footer__nav a:active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 75px;
+}
+
+.footer-logo__title {
+  font-size: 48px;
+  color: #fff;
+}
+
+.footer-logo--highlight {
+  font-family: var(--font-bold);
+}
+
+.copyright:link,
+.copyright:visited,
+.copyright:hover,
+.copyright:active {
+  color: rgba(255, 255, 255, 0.75);
+}
+/********************************************************************************
+ 4. Components
 *******************************************************************************/
 /*** hero section **/
 .hero {
@@ -158,8 +218,6 @@ nav ul li a:active {
   background-size: cover;
   background-position: center;
   padding: 0 0 1px;
-  /* max-width: 1440px;
-  margin: 0 auto;  */
 }
 
 .hero__content {
@@ -203,7 +261,7 @@ h1 {
 }
 
  .header-title--blue:after {
-   background-color: #6DA2FF;
+   background-color: var(--blue);
  }
 
 .header__nav {
@@ -226,7 +284,6 @@ h1 {
  display: flex;
  align-items: center;
  justify-content: center;
- /* width: 1440px; */
  margin: 0 auto 150px;
 }
 
@@ -235,8 +292,6 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   height: 280px;
-  /* padding-left: 120px; */
-  /* padding-right: 200px; */
 }
 
 #your-future {
@@ -338,7 +393,7 @@ h1 {
 }
 
 #card__icon--blue {
-  color: #6DA2FF;
+  color: var(--blue);
   background-color: rgba(109, 162, 255, 0.2);
 }
 
@@ -365,7 +420,7 @@ h1 {
 #card__link--buy:visited,
 #card__link--buy:hover,
 #card__link--buy:active {
-  color: #6DA2FF;
+  color: var(--blue);
 }
 
 #card__link--sell,
@@ -378,8 +433,8 @@ h1 {
 
 /** simple pricing section **/
 .simple-pricing-section {
-  margin: 200px 0;
-  padding: 150px 0;
+  margin: 200px 0 50px;
+  padding: 75px 0;
   background-color: rgba(162, 228, 255, 0.1);
 }
 
@@ -397,7 +452,7 @@ h1 {
 }
 
 .rectangle--blue {
-  background-color: #6DA2FF;
+  background-color: var(--blue);
 }
 
 .simple-pricing__content {
@@ -416,7 +471,7 @@ h1 {
 
 #pricing-search__title {
   padding: 75px 0 0;
-  color: #6DA2FF;
+  color: var(--blue);
 }
 
 .pricing-search__form {
@@ -426,14 +481,11 @@ h1 {
   padding-bottom: 75px;
 }
 
-#pricing-search__range {
-  
-}
-
 .pricing-search__dropdown {
   display: flex;
   flex-direction: column;
   margin: 75px 0;
+  max-width: 600px
 }
 
 .pricing-search {
@@ -441,8 +493,98 @@ h1 {
   font-size: 18px;
 
 }
+
+/** client testamonials section **/
+.client-testimonials {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0 0;
+}
+
+.testimonials__content {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ padding-right: 100px;
+}
+
+.testimonials-img__container {
+  flex: 1;
+  position: relative;
+  box-shadow: 0px 20px 75px rgba(0, 0, 0, 0.07);
+  background-image: url(testamonialsimg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  width: 100%;
+}
+
+.testimonials-img__content {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  line-height: 1;
+  padding: 10px 5%;
+  z-index: 1;
+  color: #fff;
+  background-image: linear-gradient( rgba(60, 79, 112, .60), rgba(60, 79, 112, .60));
+}
+
+.testimonials-img__title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.testimonials-img__text {
+  font-size: 20px;
+  margin-top: 0;
+  padding-top: 5px;
+}
+
+.testimonials-img__container:hover .testimonials-img__content {
+  display: block;
+}
+
+/** more information section **/
+.more-info-container {
+  margin: 150px 0 0;
+  padding: 75px 0 150px;
+  background-color: rgba(162, 228, 255, 0.1);
+}
+.more-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0 0;
+}
+
+.more-info__content {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#more-info__please-ask {
+  margin-bottom: 0;
+}
+
+#more-info__lorem {
+  margin-top: 0px;
+}
+
+.more-info__links {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 /********************************************************************************
- 3. Buttons
+ 5. Buttons
 *******************************************************************************/
 .btn {
   display: inline-block;
@@ -470,8 +612,8 @@ h1 {
 
 /*** hero buttons **/
 .btn--primary {
+  font-family: var(--font-bold);
    font-size: 24px;
-   font-weight: bold;
 }
 
 .btn--primary:link,
@@ -498,9 +640,34 @@ h1 {
 /** simple pricing section buttons **/
 .btn--tertiary {
   font-size: 24px;
+  font-family: var(--font-bold);
   color: #fff;
   padding: 15px 20px;
-  background-color: #6DA2FF;
+  background-color: var(--blue);
   border: none;
 }
 
+/** more info buttons **/
+
+.btn--faq {
+  font-family: var(--font-bold);
+  color: #fff;
+  padding: 10px 60px;
+  text-transform: none;
+  border: 1px solid var(--green)
+}
+
+.btn--faq:link,
+.btn--faq:visited,
+.btn--faq:hover,
+.btn--faq:active {
+  color: #fff;
+}
+
+.btn--chat {
+  font-family: var(--font-bold);
+  font-size: 24px;
+  color: var(--green);
+  padding: 10px 75px;
+  border: 1px solid var(--green)
+}
