@@ -97,6 +97,7 @@ h3{
   color: #fff;
   text-decoration: none;
 }
+
 .logo--highlight {
   color: var(--green);
 }
@@ -133,11 +134,11 @@ nav ul li a:active {
   background-color: none;
   padding: 15px 35px;
   margin: 0px;
+  transition: 0.2s;
 }
 
 .btn__nav--hover:hover {
-  transition: 0.2s;
-  background-color: var(--green);
+  color: var(--green);
 }
 
 #btn__nav {
@@ -157,14 +158,14 @@ nav ul li a:active {
   background-size: cover;
   background-position: center;
   padding: 0 0 1px;
-  max-width: 1440px;
-  margin: 0 auto;
+  /* max-width: 1440px;
+  margin: 0 auto;  */
 }
 
 .hero__content {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction:column;
   margin: 200px 0
 }
 
@@ -177,28 +178,47 @@ h1 {
 /*** recently added **/
 .section-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 100px 0;
   padding: 10px 0;
 }
 
-.header_title {
-  display: flex;
-  flex-direction: column;
+/** header title **/
+.header-title {
+  position: relative;
   font-weight: bold;
-  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
-.rectangle {
+.header-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   height: 5px;
   width: 55px;
   background-color: var(--green);
   margin: 5px 0;
 }
 
+ .header-title--blue:after {
+   background-color: #6DA2FF;
+ }
+
 .header__nav {
  display: flex;
  list-style: none;
+}
+
+.header__nav a {
+  color: #333E5A;
+  opacity: 0.7;
+}
+
+.header__nav a.active {
+  border-bottom: 5px solid var(--green);
+  opacity: 1;
 }
 
 /*** future-home container **/
@@ -206,7 +226,7 @@ h1 {
  display: flex;
  align-items: center;
  justify-content: center;
- width: 1440px;
+ /* width: 1440px; */
  margin: 0 auto 150px;
 }
 
@@ -215,13 +235,13 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   height: 280px;
-  padding-left: 120px;
-  padding-right: 200px;
+  /* padding-left: 120px; */
+  /* padding-right: 200px; */
 }
 
 #your-future {
-  padding-top: 0px;
-  margin-top: 0px;
+  padding: 0 50px 0 0;
+  margin-top: 0;
 }
 
 /** house cards **/
@@ -472,8 +492,7 @@ h1 {
 
 .btn--secondary:hover {
   transition: 0.2s;
-  border-bottom: 5px solid var(--green);
-  transform: translateY(-5px);
+  opacity: 1;
 }
 
 /** simple pricing section buttons **/
