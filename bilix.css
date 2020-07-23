@@ -1,160 +1,487 @@
-/* ====================================================================================================
-    1. Global
-======================================================================================================= */
+/********************************************************************************
+ 1. Global
+*******************************************************************************/
+
+/*** variables **/
+:root {
+  --green: #25E39A;
+  --font-normal: 'proxima_novaregular', sans-serif;
+  --font-bold:'proxima_novabold', sans-serif;
+  --font-boldx2: 'proxima_novaextrabold', sans-serif;
+}
+
+/*** fonts **/
 @font-face {
   font-family: 'proxima_novaregular';
-  src: url('webkit\proximanova-regular-webfont.woff2') format('woff2'),
-       url('webkit\proximanova-regular-webfont.woff') format('woff');
+  src: url('webkit/proximanova-regular-webfont.woff2') format('woff2'),
+       url('webkit/proximanova-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-.section01 {
-  /* this will be an img eventually*/
-  background-image: url(biliximg3.jpg);
-  background-repeat: no-repeat;
+
+@font-face {
+  font-family: 'proxima_novabold';
+  src: url('webkit/proxima_nova_bold-webfont.woff2') format('woff2'),
+       url('webkit/proxima_nova_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
-body{
+
+@font-face {
+  font-family: 'proxima_novaextrabold';
+  src: url('webkit/proxima_nova_extrabold-webfont.woff2') format('woff2'),
+       url('webkit/proxima_nova_extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*** body **/
+body {
+  font-family: var(--font-normal);
+  line-height: 1.4;
+  margin: 0px;
+  color: #333E5A;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/*** global typography **/
+h2 {
+  font-family: var(--font-bold);
+  font-size: 36px;
+  margin: 0;
+}
+
+h3{
+  font-size: 24px;
+}
+
+.lorem {
+  color:  rgba(51, 62, 90, 0.7);
+  word-wrap: normal;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+/*** main container **/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/********************************************************************************
+ 2. Header
+*******************************************************************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/*** logo **/
+.logo {
+  text-decoration: none;
+  font-size: 36px;
+}
+
+.logo:link,
+.logo:visited,
+.logo:hover,
+.logo:active {
+  color: #fff;
+  text-decoration: none;
+}
+.logo--highlight {
+  color: var(--green);
+}
+
+/*** nav bar **/
+nav ul {
+  list-style: none;
+  font-size: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 0px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:active {
+  color: #fff;
+}
+
+/*** nav buttons **/
+.btn__nav--hover {
+  background-color: none;
+  padding: 15px 35px;
   margin: 0px;
 }
-/* ====================================================================================================
-    2. Custom Variables
-======================================================================================================= */
-:root {
-  --green-font-color: #25E39A;
+
+.btn__nav--hover:hover {
+  transition: 0.2s;
+  background-color: var(--green);
 }
-:root {
-  --main-font: 'proxima_novaregular';
+
+#btn__nav {
+  background-color: var(--green);
+  padding: 15px 30px;
+  margin: 0px;
+  border: none;
 }
-/* ====================================================================================================
-    3. Typography
-======================================================================================================= */
-#logo01 {
-  display: inline-flex;
-  position: relative;
-  font: var(--main-font);
-  font-size: 36px;
-  color: white;
+
+/********************************************************************************
+ 3. Components
+*******************************************************************************/
+/*** hero section **/
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(biliximg3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 0 1px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-#logo02 {
-  color: var(--green-font-color);
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 200px 0
 }
-/* ====================================================================================================
-    4. Grid System
-======================================================================================================= */
-.container {
-  display: grid;
-  grid-template-columns: 1440px;
-  grid-template-rows: 768px 716px 919px 963px 601px 657px 334px;
-} 
-/*.container {
+
+h1 {
+  font-family: var(--font-bold);
+  font-size: 72px;
+  color: #fff;
+}
+
+/*** recently added **/
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0;
+  padding: 10px 0;
+}
+
+.header_title {
   display: flex;
   flex-direction: column;
-  height: 800px;
-} not sure if i should use flex or grid yet for the main structure */
-.header01 {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  width: 90%;
-  padding: 0 5% 0 5%;
-}
-.topnav {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-/* .commercial {
-  display: inline-flex;
-  justify-content: flex-end;
-  width: 100%;
-} */
-/* ====================================================================================================
-    5. Components
-======================================================================================================= */
-#sign {
-  color: white;
-  background-color: var(--green-font-color);
-  font: var(--main-font);
-  font-weight: normal;
-  padding: 10px 15px;
-  border: 0px;
-}
-.topnavcomp {
-  padding: 15px 30px;
-}
-.topnavcomp:link {
-  color: white;
-  text-decoration: none;
-}
-.topnavcomp:visited {
-  color: white;
-  text-decoration: none;
-}
-.topnavcomp:hover {
-  color: white;
-  text-decoration: none;
-}
-.topnavcomp:active {
-  color: white;
-  text-decoration: none;
-}
-#welcome {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font: var(--main-font);
-  font-size: 72px;
-  font-weight: 900;
-  width: 100%;
-  padding: 150px 0 0 0;
-}
-#form02 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#find {
-  color: white;
-  background-color: var(--green-font-color);
-  font: var(--main-font);
   font-weight: bold;
-  font-size: 24px;
-  padding: 15px 20px;
-  border: 0px;
+  padding-top: 15px;
 }
-#rectangle01 {
+
+.rectangle {
   height: 5px;
-  border: 5px;
-  background-color: var(--green-font-color);
-  width: 40px;
+  width: 55px;
+  background-color: var(--green);
+  margin: 5px 0;
 }
-/* .house {
-  height: 301px;
-  width: 297px;
-  margin: 10px;
+
+.header__nav {
+ display: flex;
+ list-style: none;
 }
-#house01 {
-  position: relative;
-  height: 100%;
+
+/*** future-home container **/
+.future-home__container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 1440px;
+ margin: 0 auto 150px;
+}
+
+.future-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 280px;
+  padding-left: 120px;
+  padding-right: 200px;
+}
+
+#your-future {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/** house cards **/
+.house-container {
+  display: flex;
   width: 100%;
+  justify-content: space-between;
 }
-#house02 {
-  position: relative;
-  height: 100%;
+
+#house-card-one {
+  background-image: url(biliximg4.jpg);
+}
+
+#house-card-two {
+  background-image: url(biliximg5.jpg);
+}
+
+#house-card-three {
+  background-image: url(biliximg6.jpg);
+}
+
+.house-card__img {
+  height: 280px;
   width: 100%;
+  background-size: cover;
+  background-position: center;
 }
-#house03 {
+
+.house-card {
+  flex: 1;
   position: relative;
-  height: 100%;
-  width: 100%;
+  margin-right: 15px;
+  transition: all 200ms ease;
+} 
+
+.house-card:hover {
+  transform: translateY(-5px);
 }
-.housetext {
+
+.house-card:last-child {
+  margin-right: 0;
+}
+
+.house-card__content {
   position: absolute;
-  width: 100%;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  font: var(--main-font);
-} */
+  bottom: 0;
+  width: 90%;
+  padding: 10px 5%;
+  z-index: 1;
+  color: #fff;
+  background-image: linear-gradient( rgba(60, 79, 112, .60), rgba(60, 79, 112, .60));
+}
+
+
+.house-card__type {
+  font-size: 22px;
+  margin: 0 0 5px;
+}
+
+.house-card__price {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+/*** homework cards **/
+.homework-card__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 120px 0;
+}
+
+.homework-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-right: 20px;
+  padding: 50px;
+  box-shadow: 0px 20px 75px rgba(0, 0, 0, 0.07);
+}
+
+.homework-card__icon {
+  font-size: 32px;
+  text-align: center;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+#card__icon--green {
+  color: var(--green);
+  background-color: rgba(37, 227, 154, 0.2);
+}
+
+#card__icon--blue {
+  color: #6DA2FF;
+  background-color: rgba(109, 162, 255, 0.2);
+}
+
+#card__icon--pink {
+  color: #E74D89;
+  background-color: rgba(231, 77, 137, 0.2)
+}
+
+.homework-card__link {
+  margin-top:30px;
+  font-size: 18px;
+}
+
+#card__link--rent,
+#card__link--rent:link,
+#card__link--rent:visited,
+#card__link--rent:hover,
+#card__link--rent:active {
+  color: var(--green);
+}
+
+#card__link--buy,
+#card__link--buy:link,
+#card__link--buy:visited,
+#card__link--buy:hover,
+#card__link--buy:active {
+  color: #6DA2FF;
+}
+
+#card__link--sell,
+#card__link--sell:link,
+#card__link--sell:visited,
+#card__link--sell:hover,
+#card__link--sell:active {
+  color: #E74D89;
+}
+
+/** simple pricing section **/
+.simple-pricing-section {
+  margin: 200px 0;
+  padding: 150px 0;
+  background-color: rgba(162, 228, 255, 0.1);
+}
+
+.simple-pricing__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.simple-pricing__info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-right: 200px;
+}
+
+.rectangle--blue {
+  background-color: #6DA2FF;
+}
+
+.simple-pricing__content {
+  margin-top: 80px;
+}
+
+.simple-pricing__search {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 20px 75px rgba(0, 0, 0, 0.07);
+}
+
+#pricing-search__title {
+  padding: 75px 0 0;
+  color: #6DA2FF;
+}
+
+.pricing-search__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 75px;
+}
+
+#pricing-search__range {
+  
+}
+
+.pricing-search__dropdown {
+  display: flex;
+  flex-direction: column;
+  margin: 75px 0;
+}
+
+.pricing-search {
+  display: block;
+  font-size: 18px;
+
+}
+/********************************************************************************
+ 3. Buttons
+*******************************************************************************/
+.btn {
+  display: inline-block;
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: var(--green);
+  padding: 15px 50px;
+}
+
+/** fa-btn **/
+.fi-btn {
+  margin-bottom: 8px;
+}
+
+.fi-btn__icon {
+  background-color: var(--green);
+  color: #fff;
+  padding: 8px 10px;
+}
+
+.fi-btn__text {
+  color: var(--green);
+  font-size: 18px;
+}
+
+/*** hero buttons **/
+.btn--primary {
+   font-size: 24px;
+   font-weight: bold;
+}
+
+.btn--primary:link,
+.btn--primary:visited,
+.btn--primary:hover,
+.btn--primary:active {
+  color: #fff;
+}
+
+/*** recently-added section buttons **/
+.btn--secondary {
+  display: inline-block;
+  border-bottom: 5px solid #fff;
+  padding: 15px 40px;
+  font-size: 18px;
+  background-color: rgba(51, 62, 90, 0.05);
+}
+
+.btn--secondary:hover {
+  transition: 0.2s;
+  border-bottom: 5px solid var(--green);
+  transform: translateY(-5px);
+}
+
+/** simple pricing section buttons **/
+.btn--tertiary {
+  font-size: 24px;
+  color: #fff;
+  padding: 15px 20px;
+  background-color: #6DA2FF;
+  border: none;
+}
+

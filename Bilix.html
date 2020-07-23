@@ -4,66 +4,174 @@
   <title>Bilix House Project</title>
   <link rel="stylesheet" type="text/css" href="bilix.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="https://friconix.com/cdn/friconix-0.1657.js"> </script> 
 </head>
 
   <body>
-    
-    <div class="container"> <!--define grid-->
-      
-      <div class="section01">
-        <div class="header01">
-          <p id="logo01">Bilix<span id="logo02">House</span></p>
-          <form class="topnav"><!--flex to position inline to the right-->
-            <a class="topnavcomp" href="#">Rent</a>
-            <a class="topnavcomp" href="#">Buy</a>
-            <a class="topnavcomp" href="#">Sale</a>
-            <a class="topnavcomp" href="#">Create Account</a>
-            <button class="topnavcomp" id="sign" type="submit" formaction="https://soundcloud.com/gmzfdnn/george-michael-careless">Sign</button>
-          </form>
-        </div>
-        <h1 id="welcome">Welcome in BilixHouse</h1>
-        <form id="form02"> 
-          <button id="find" type="submit" formaction="https://soundcloud.com/gmzfdnn/george-michael-careless">FIND DREAM HOUSES EASILY</button>
-        </form>
-      </div>
-      
-     <!-- <div class="section02">
-        <h2 id="sectiontitle01">Recently Added</h2>
-        <div id="rectangle01"></div> 
-        <form class="nav02">
-          <button id="home" type="submit" formaction="https://soundcloud.com/gmzfdnn/george-michael-careless">Home</button>
-          <button id="apartments" type="submit" formaction="#">Apartments</button>
-          <button id="view" type="submit" formaction="#">View All</button>
-        </form>
-        <div class="commercial"> 
-          <div class="house">
-            <a href="#"><img id="house01" src="biliximg4.jpg" alt="Sucks to be you"></a>
-            <p class="housetext" id="housetext01">Commercial Retail<br><br><span id="housetext02">123,456 USD</span></p>
-          </div>
-          <div class="house">
-            <a href="#"><img id="house02" src="biliximg5.jpg" alt="Sucks to be you"></a>
-            <p class="housetext" id="housetext01">Commercial Retail<br><br><span id="housetext02">123,456 USD</span></p>
-          </div>
-          <div class="house">
-            <a href="#"><img id="house03" src="biliximg6.jpg" alt="Sucks to be you"></a>
-            <p class="housetext" id="housetext01">Commercial Retail<br><br><span id="housetext02">123,456 USD</span></p>
-          </div>
-        </div>
-        <div>
-          <h3 id="yourfuture">Your Future Home</h3>
-          <p id="lorem01">Lorem ipsum dolor sit amet,<br> consectetur adipiscing<br> eiusmod veniam.</p>
-        </div>
-        <form> 
-          <button id="right" type="submit" formaction="https://soundcloud.com/gmzfdnn/george-michael-careless"><i class="fa fa-angle-right"></i></button>
-          <a id="future" href="https://soundcloud.com/gmzfdnn/george-michael-careless">Get A Future Home</a>
-        </form>  
-      </div> -->
 
-      <div class="section03"></div>
-      <div class="section04"></div>
-      <div class="section05"></div>
-      <div class="section06"></div>
-      <div class="section07"></div>
-    </div>
+    <!--HERO SECTION-->
+    <section class="hero">
+      <header>
+        <div class="container">
+          <!-- GLOBAL HEADER -->
+          <div class="header">
+            <a href="#" class="logo">Bilix<span class="logo--highlight">House</span></a>
+            <nav>
+              <ul>
+                <li><a class="btn__nav--hover" href="#">Rent</a></li>
+                <li><a class="btn__nav--hover" href="#">Buy</a></li>
+                <li><a class="btn__nav--hover" href="#">Sell</a></li>
+                <li><a class="btn__nav--hover" href="#">Create Account</a></li>
+                <li><a id="btn__nav" href="#">Sign In</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- HERO CONTENT -->
+          <div class="hero__content">
+            <h1>Welcome to BilixHouse</h1>
+            <a class="btn btn--primary" href="#">Find Dream Houses Easily</a>
+          </div>
+        </div>
+      </header>  
+    </section>
+
+    <!-- "RECENTLY ADDED" -->
+    <section class="recently-added">
+      <div class="container">
+        <div class="section-header">
+          <!-- SECTION HEADER -->
+          <div class="header__title">
+            <h2>Recently Added</h2>
+            <p class="rectangle"></p>
+          </div>
+          <!-- "RECENTLY ADDED" NAV -->
+          <div>
+            <ul class="header__nav">
+              <li><a class="btn--secondary" href="#">Home</a></li>
+              <li><a class="btn--secondary" href="#">Apartment</a></li>           
+              <li><a class="btn--secondary" href="#">View All</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <!-- FUTURE HOME -->
+      <div class="future-home__container">
+        <div class="future-home">
+          <div class="future-home__content">
+            <h3 id="your-future">Your Future Home</h3>
+            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing eiusmod veniam.</p>
+          </div>
+          <div class="fi-btn">
+            <a class="fi-btn__icon" href="#"><i class="fi-xnlrxl-chevron"></i></a>
+            <a class="fi-btn__text" href="#">Get A Future Home</a>
+          </div>
+        </div>
+        <!-- HOUSE CARDS -->
+        <div class="house-container">
+          <!-- CARD ONE -->
+          <a class="house-card" href="#">
+            <div id="house-card-one" class="house-card__img"></div>
+            <div class="house-card__content">
+              <p class="house-card__type">Commercial Retail</p>
+              <p class="house-card__price">$123,456 USD</p>
+            </div>
+          </a>
+          <!-- CARD TWO -->
+          <a class="house-card" href="#">
+            <div id="house-card-two" class="house-card__img"></div>
+            <div class="house-card__content">
+              <p class="house-card__type">Commercial Retail</p>
+              <p class="house-card__price">$123,456 USD</p>
+            </div>
+          </a>
+          <!-- CARD THREE -->
+          <a class="house-card" href="#">
+            <div id="house-card-three" class="house-card__img"></div>
+            <div class="house-card__content">
+              <p class="house-card__type">Commercial Retail</p>
+              <p class="house-card__price">$123,456 USD</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FEATURED SECTION -->
+    <section class="featured">
+      <div class="container">
+        <div class="header_title">
+          <h2>Featured</h2>
+          <p class="rectangle"></p>
+        </div>
+        <div class="homework-card__container">
+          <!-- CARD ONE -->
+          <div class="homework-card">
+            <i class="fi-xnluxl-house homework-card__icon" id="card__icon--green" aria-hidden="true"></i>
+            <h3 class="homework-card__title">Rent Homework</h3>
+            <p class="lorem">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore magna aliqua.</p>
+            <a class="homework-card__link" id="card__link--rent" href="#">View Details</a>
+          </div>
+          <!-- CARD TWO -->
+          <div class="homework-card">
+            <i class="fi-xnluhl-shopping-cart homework-card__icon" id="card__icon--blue" aria-hidden="true"></i>
+            <h3 class="homework-card__title">Buy Homework</h3>
+            <p class="lorem">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore magna aliqua.</p>
+            <a class="homework-card__link" id="card__link--buy" href="#">View Details</a>
+          </div>
+          <!-- CARD THREE -->
+          <div class="homework-card">
+            <i class="fi-xnsuxl-dollar-solid homework-card__icon" id="card__icon--pink" aria-hidden="true"></i>
+            <h3 class="homework-card__title">Sell Homework</h3>
+            <p class="lorem">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore magna aliqua.</p>
+            <a class="homework-card__link" id="card__link--sell" href="#">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMPLE PRICING SECTION -->
+    <section class="simple-pricing-section">
+      <div class="container">
+        <div class="simple-pricing__container">
+          <div class="simple-pricing__info">
+            <div class="header_title">
+              <h2>Simple Pricing</h2>
+              <p class="rectangle rectangle--blue"></p>
+            </div>
+            <div class="simple-pricing__content">
+              <h3>Find Exactly What You Need</h3>
+              <p class="lorem">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <!-- SIMPLE PRICING SEARCH FORM -->
+          <div class="simple-pricing__search">
+            <p id="pricing-search__title">Home Value</p>
+            <form action="#" class="pricing-search__form">
+              <p class="search-range__value">$1,500,000</p>
+              <input type="range" min="100,000" max=" 2,500,000" value="1,500,000" step="50,000" name="home-search" id="pricing-search__range">
+              <div class="pricing-search__dropdown">
+                <select name="pricing-search" class="pricing-search">
+                  <option value="all-types">All Types</option>
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="condo">Condo</option>
+                  <option value="duplex">Duplex</option>
+                </select>
+                <select name="pricing-search" class="pricing-search">
+                  <option value="">Title</option>
+                  <option value="wtf">Not sure wtf this is asking for...</option>
+                </select>
+                <select name="pricing-search" class="pricing-search">
+                  <option value="">Country</option>
+                  <option value="united-states">United States</option>
+                  <option value="canada">Canada</option>
+                </select>
+              </div>
+              <input type="submit" value="See Now" class="btn--tertiary">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>    
   </body>
 </html>
