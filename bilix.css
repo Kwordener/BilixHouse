@@ -37,6 +37,10 @@
 }
 
 /*** body **/
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: var(--font-normal);
   line-height: 1.4;
@@ -54,18 +58,18 @@ a:active {
 /*** global typography **/
 h2 {
   font-family: var(--font-bold);
-  font-size: 36px;
+  font-size: 2rem;
   margin: 0;
 }
 
 h3{
-  font-size: 24px;
+  font-size: 1.33rem;
 }
 
 .lorem {
   color:  rgba(51, 62, 90, 0.7);
   word-wrap: normal;
-  font-size: 18px;
+  font-size: 1rem;
   padding-top: 15px;
 }
 
@@ -88,7 +92,7 @@ h3{
 /*** logo **/
 .logo {
   text-decoration: none;
-  font-size: 36px;
+  font-size: 2rem;
 }
 
 .logo:link,
@@ -120,7 +124,7 @@ nav ul li:last-child {
 
 nav ul li a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 nav ul li a:link,
@@ -194,7 +198,7 @@ nav ul li a:active {
 }
 
 .footer-logo__title {
-  font-size: 48px;
+  font-size: 2.66rem;
   color: #fff;
 }
 
@@ -229,7 +233,7 @@ nav ul li a:active {
 
 h1 {
   font-family: var(--font-bold);
-  font-size: 72px;
+  font-size: 4rem;
   color: #fff;
 }
 
@@ -352,12 +356,12 @@ h1 {
 
 
 .house-card__type {
-  font-size: 22px;
+  font-size: 1.22rem;
   margin: 0 0 5px;
 }
 
 .house-card__price {
-  font-size: 18px;
+  font-size: 1rem;
   margin: 0 0 5px;
 }
 
@@ -379,7 +383,7 @@ h1 {
 }
 
 .homework-card__icon {
-  font-size: 32px;
+  font-size: 1.77rem;
   text-align: center;
   line-height: 75px;
   height: 75px;
@@ -404,7 +408,7 @@ h1 {
 
 .homework-card__link {
   margin-top:30px;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 #card__link--rent,
@@ -490,7 +494,7 @@ h1 {
 
 .pricing-search {
   display: block;
-  font-size: 18px;
+  font-size: 1rem;
 
 }
 
@@ -533,12 +537,12 @@ h1 {
 }
 
 .testimonials-img__title {
-  font-size: 24px;
+  font-size: 1.33rem;
   margin: 0;
 }
 
 .testimonials-img__text {
-  font-size: 20px;
+  font-size: 1.11rem;
   margin-top: 0;
   padding-top: 5px;
 }
@@ -582,13 +586,20 @@ h1 {
   align-items: center;
 }
 
+.more-info__links ul {
+  list-style: none;
+}
+
+.more-info__links ul li {
+  margin-bottom: 20px;
+}
 
 /********************************************************************************
  5. Buttons
 *******************************************************************************/
 .btn {
   display: inline-block;
-  font-size: 24px;
+  font-size: 1.33rem;
   text-transform: uppercase;
   background-color: var(--green);
   padding: 15px 50px;
@@ -607,13 +618,13 @@ h1 {
 
 .fi-btn__text {
   color: var(--green);
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 /*** hero buttons **/
 .btn--primary {
   font-family: var(--font-bold);
-   font-size: 24px;
+   font-size: 1.33rem;
 }
 
 .btn--primary:link,
@@ -628,7 +639,7 @@ h1 {
   display: inline-block;
   border-bottom: 5px solid #fff;
   padding: 15px 40px;
-  font-size: 18px;
+  font-size: 1rem;
   background-color: rgba(51, 62, 90, 0.05);
 }
 
@@ -639,7 +650,7 @@ h1 {
 
 /** simple pricing section buttons **/
 .btn--tertiary {
-  font-size: 24px;
+  font-size: 1.33rem;
   font-family: var(--font-bold);
   color: #fff;
   padding: 15px 20px;
@@ -652,9 +663,11 @@ h1 {
 .btn--faq {
   font-family: var(--font-bold);
   color: #fff;
+  font-size: 1.33rem;
   padding: 10px 60px;
   text-transform: none;
-  border: 1px solid var(--green)
+  border: 1px solid var(--green);
+  background-color: var(--green);
 }
 
 .btn--faq:link,
@@ -666,8 +679,152 @@ h1 {
 
 .btn--chat {
   font-family: var(--font-bold);
-  font-size: 24px;
+  font-size: 1.33rem;
   color: var(--green);
-  padding: 10px 75px;
+  padding: 10px 78px;
   border: 1px solid var(--green)
 }
+
+/*** media queries ***/
+@media only screen and (max-width: 850px) {
+  html {
+    font-size: 10px;
+  }
+
+  .container {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .header {
+    padding-top: 0;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 20px;
+    margin-right: 0;
+  }
+
+  nav ul li:last-child {
+    margin-right: 5px;
+  }
+  
+  #btn__nav {
+    background: none;
+    transition: 0.2s;
+  }
+  
+  #btn__nav:hover {
+    color: var(--green);
+  }
+
+  .hero__content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 0 0 0;
+  }
+
+  .header__nav {
+    padding-left: 0;
+  }
+
+  .btn--secondary {
+    padding: 15px 30px;
+  }
+
+  .future-home__container {
+    flex-direction: column;
+    margin-bottom: 75px;
+  }
+
+  .future-home {
+    justify-content: space-evenly;
+  }
+
+  .homework-card__container {
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .homework-card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .simple-pricing-section {
+    margin-top: 50px;
+  }
+
+  .simple-pricing__container {
+    flex-direction: column;
+  }
+
+  .simple-pricing__info {
+    padding-right: 50px;
+  }
+  
+  .simple-pricing__content {
+    margin-top: 40px;
+  }
+
+  .simple-pricing__search {
+    width: 300px;
+  }
+
+  .client-testimonials {
+    padding: 10px 0 0;
+  }
+
+  .testimonials__content {
+    padding-right: 20px;
+  }
+
+  .more-info-container {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .more-info {
+    margin-top: 20px;
+  }
+
+  .more-info__links {
+    flex-direction: column;
+  }
+  
+  .btn--chat {
+    padding: 10px 5%;
+  }
+
+  .btn--faq {
+    padding: 10px 0;
+  }
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__nav {
+    padding-right: 0;
+  }
+
+  .footer__logo {
+    padding-top: 25px;
+  }
+}  
