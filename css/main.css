@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  font-size: 1.33rem;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  background-color: var(--green);
+  padding: 15px 50px;
+  transition: all 150ms ease;
+}
+
+.btn--primary {
+  color: green;
+}
+
+.btn--primary:active, .btn--primary:hover {
+  color: blue;
+}
+
+.btn--secondary:active, .btn--secondary:hover {
+  color: blue;
+}
