@@ -7,6 +7,7 @@
   --green: #25E39A;
   --green-dark: #26d290;
   --blue: #6DA2FF;
+  --white: #fff;
   --font-normal: 'proxima_novaregular', sans-serif;
   --font-bold:'proxima_novabold', sans-serif;
   --font-boldx2: 'proxima_novaextrabold', sans-serif;
@@ -79,15 +80,20 @@ h3{
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.section-sm {
+  margin-top: 50px;
+}
+
+.section-md {
+  margin-top: 100px
+}
 /********************************************************************************
  2. Header
 *******************************************************************************/
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+header {
+  padding: 10px 0;
 }
 
 /*** logo **/
@@ -100,7 +106,7 @@ h3{
 .logo:visited,
 .logo:hover,
 .logo:active {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -132,7 +138,7 @@ nav ul li a:link,
 nav ul li a:visited,
 nav ul li a:hover,
 nav ul li a:active {
-  color: #fff;
+  color: var(--white);
 }
 
 /*** nav buttons **/
@@ -160,47 +166,40 @@ nav ul li a:active {
 .footer-container {
   background-color: #333E5A;
   font-family: var(--font-normal);
-  color: #fff;
+  color: var(--white);
   padding: 50px 0;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer__nav {
-  flex: 2;
-  display: flex;
-  justify-content: space-between;
-  padding-right: 200px;
-}
-
-.footer__nav ul {
+.footer ul {
   list-style: none;
   color: rgba(255, 255, 255, 0.75);
   padding: 0;
   margin: 0;
 }
 
-.footer__nav a:link,
-.footer__nav a:visited,
-.footer__nav a:hover,
-.footer__nav a:active {
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:active {
   color: rgba(255, 255, 255, 0.75);
 }
 
 .footer__logo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 75px;
+}
+
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:active {
+  color: #fff;
 }
 
 .footer-logo__title {
   font-size: 2.66rem;
-  color: #fff;
+  color: var(--white);
 }
 
 .footer-logo--highlight {
@@ -226,25 +225,19 @@ nav ul li a:active {
 }
 
 .hero__content {
-  display: flex;
-  align-items: center;
-  flex-direction:column;
   margin: 200px 0
 }
 
 h1 {
   font-family: var(--font-bold);
   font-size: 4rem;
-  color: #fff;
+  color: var(--white);
 }
 
-/*** recently added **/
+/** section header **/
+
 .section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 100px 0;
-  padding: 10px 0;
+  margin-bottom: 50px;
 }
 
 /** header title **/
@@ -265,12 +258,13 @@ h1 {
   margin: 5px 0;
 }
 
- .header-title--blue:after {
-   background-color: var(--blue);
- }
+.header-title--blue:after {
+  background-color: var(--blue);
+}
 
 .header__nav {
  display: flex;
+ justify-content: flex-end;
  list-style: none;
 }
 
@@ -296,7 +290,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 280px;
 }
 
 #your-future {
@@ -305,11 +298,6 @@ h1 {
 }
 
 /** house cards **/
-.house-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
 
 #house-card-one {
   background-image: url(/images/biliximg4.jpg);
@@ -331,7 +319,6 @@ h1 {
 }
 
 .house-card {
-  flex: 1;
   position: relative;
   margin-right: 15px;
   transition: all 200ms ease;
@@ -351,7 +338,7 @@ h1 {
   width: 90%;
   padding: 10px 5%;
   z-index: 1;
-  color: #fff;
+  color: var(--white);
   background-image: linear-gradient( rgba(60, 79, 112, .60), rgba(60, 79, 112, .60));
 }
 
@@ -367,18 +354,11 @@ h1 {
 }
 
 /*** homework cards **/
-.homework-card__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 120px 0;
-}
 
 .homework-card {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin-right: 20px;
   padding: 50px;
   box-shadow: 0px 20px 75px rgba(0, 0, 0, 0.07);
 }
@@ -437,45 +417,33 @@ h1 {
 }
 
 /** simple pricing section **/
-.simple-pricing-section {
-  margin: 200px 0 50px;
+.pricing-section {
   padding: 75px 0;
   background-color: rgba(162, 228, 255, 0.1);
 }
 
-.simple-pricing__container {
+.pricing__info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.simple-pricing__info {
-  display: flex;
-  flex: 1;
   flex-direction: column;
   padding-right: 200px;
+  max-width: 60%;
 }
 
-.rectangle--blue {
-  background-color: var(--blue);
-}
-
-.simple-pricing__content {
+.pricing__content {
   margin-top: 80px;
 }
 
-.simple-pricing__search {
-  flex: 2;
+.pricing__search {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: 0px 20px 75px rgba(0, 0, 0, 0.07);
 }
 
 #pricing-search__title {
-  padding: 75px 0 0;
+  padding: 25px 0 0;
   color: var(--blue);
 }
 
@@ -483,13 +451,13 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 75px;
+  padding-bottom: 43px;
 }
 
 .pricing-search__dropdown {
   display: flex;
   flex-direction: column;
-  margin: 75px 0;
+  margin: 50px 0;
   max-width: 600px
 }
 
@@ -500,14 +468,7 @@ h1 {
 }
 
 /** client testamonials section **/
-.client-testimonials {
-  display: flex;
-  justify-content: space-between;
-  padding: 100px 0 0;
-}
-
 .testimonials__content {
- flex: 1;
  display: flex;
  flex-direction: column;
  justify-content: space-between;
@@ -515,7 +476,6 @@ h1 {
 }
 
 .testimonials-img__container {
-  flex: 1;
   position: relative;
   box-shadow: 0px 20px 75px rgba(0, 0, 0, 0.07);
   background-image: url(/images/testamonialsimg.jpg);
@@ -533,7 +493,7 @@ h1 {
   line-height: 1;
   padding: 10px 5%;
   z-index: 1;
-  color: #fff;
+  color: var(--white);
   background-image: linear-gradient( rgba(60, 79, 112, .60), rgba(60, 79, 112, .60));
 }
 
@@ -554,19 +514,14 @@ h1 {
 
 /** more information section **/
 .more-info-container {
-  margin: 150px 0 0;
-  padding: 75px 0 150px;
+  padding: 75px 0;
   background-color: rgba(162, 228, 255, 0.1);
 }
 .more-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 100px 0 0;
+  margin: 50px 0 0;
 }
 
 .more-info__content {
-  flex: 1.2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -578,21 +533,6 @@ h1 {
 
 #more-info__lorem {
   margin-top: 0px;
-}
-
-.more-info__links {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.more-info__links ul {
-  list-style: none;
-}
-
-.more-info__links ul li {
-  margin-bottom: 20px;
 }
 
 /********************************************************************************
@@ -628,7 +568,7 @@ h1 {
 
 .fi-btn__icon {
   background-color: var(--green);
-  color: #fff;
+  color: var(--white);
   padding: 8px 10px;
 }
 
@@ -647,13 +587,13 @@ h1 {
 .btn--primary:visited,
 .btn--primary:hover,
 .btn--primary:active {
-  color: #fff;
+  color: var(--white);
 }
 
 /*** recently-added section buttons **/
 .btn--secondary {
   display: inline-block;
-  border-bottom: 5px solid #fff;
+  border-bottom: 5px solid var(--white);
   padding: 15px 40px;
   font-size: 1rem;
   background-color: rgba(51, 62, 90, 0.05);
@@ -668,7 +608,7 @@ h1 {
 .btn--tertiary {
   font-size: 1.33rem;
   font-family: var(--font-bold);
-  color: #fff;
+  color: var(--white);
   padding: 15px 20px;
   background-color: var(--blue);
   border: none;
@@ -678,7 +618,7 @@ h1 {
 
 .btn--faq {
   font-family: var(--font-bold);
-  color: #fff;
+  color: var(--white);
   font-size: 1.33rem;
   padding: 10px 60px;
   text-transform: none;
@@ -690,7 +630,7 @@ h1 {
 .btn--faq:visited,
 .btn--faq:hover,
 .btn--faq:active {
-  color: #fff;
+  color: var(--white);
 }
 
 .btn--chat {
@@ -703,16 +643,24 @@ h1 {
 
 
 /*** media queries ***/
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .btn__nav--hover {
+    display: none;
+  }
+}
 @media only screen and (max-width: 850px) {
   html {
     font-size: 10px;
   }
 
-  .container {
-    margin-right: 5%;
-    margin-left: 5%;
-  }
-
+  /**
   .header {
     padding-top: 0;
   }
@@ -845,29 +793,4 @@ h1 {
     padding-top: 25px;
   }
 }  
-
-
-/** text utilities **/
-.text--center {
-  text-align: center;
-}
-
-.text--right {
-  text-align: right;
-}
-
-.text--left {
-  text-align: left;
-}
-
-.section--sm {
-  margin: 32px 0;
-}
-
-.section--md {
-  margin: 80px 0;
-}
-
-.section--lg {
-  margin: 120px 0;
-}
+*/
