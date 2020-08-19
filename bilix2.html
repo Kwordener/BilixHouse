@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Bilix House Project</title>
-  <link rel="stylesheet" type="text/css" href="css/old.css">
   <link rel="stylesheet" href="css/vendor/flexboxgrid.css">
+  <link rel="stylesheet" type="text/css" href="css/old.css">
   <script defer src="https://friconix.com/cdn/friconix-0.1657.js"></script> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -20,15 +20,18 @@
               <a href="#" class="logo">Bilix<span class="logo--highlight">House</span></a>
             </div>
             <div class="col-xs-9 col-sm-7 end-xs">
-              <nav>
+              <nav class="header-nav">
                 <ul>
-                  <li><a class="btn__nav--hover" href="#">Rent</a></li>
-                  <li><a class="btn__nav--hover" href="#">Buy</a></li>
-                  <li><a class="btn__nav--hover" href="#">Sell</a></li>
-                  <li><a class="btn__nav--hover" href="#">Create Account</a></li>
-                  <li><a id="btn__nav" href="https://www.latlmes.com/breaking/your-sensational-news-headline-here-1">Sign In</a></li>
+                  <li><a class="nav-link__hover" href="#">Rent</a></li>
+                  <li><a class="nav-link__hover" href="#">Buy</a></li>
+                  <li><a class="nav-link__hover" href="#">Sell</a></li>
+                  <li><a class="nav-link__hover" href="#">Create Account</a></li>
+                  <li><a class="btn__nav-link" href="https://www.latlmes.com/breaking/your-sensational-news-headline-here-1">Sign In</a></li>
                 </ul>
               </nav>
+            </div>
+            <div class="mobile-menu">
+              <i class="fi-xnsux3-three-bars-solid"></i>
             </div>
           </div>
         </div>  
@@ -56,13 +59,13 @@
         <div class="section-header">
           <div class="row between-xs middle-xs">
             <div class="col-xs-12 col-sm-3">
-              <h2 class="header-title">Recently Added</h2>
+              <h2 class="section-title">Recently Added</h2>
             </div>
             <div class="col-xs-12 col-sm-5 end-xs">
-              <ul class="header__nav">
-                <li><a class="btn--secondary active" href="#">Home</a></li>
-                <li><a class="btn--secondary" href="#">Apartment</a></li>
-                <li><a class="btn--secondary" href="#">View All</a></li>
+              <ul class="section-tab">
+                <li><a class="section-tab__link active" href="#">Home</a></li>
+                <li><a class="section-tab__link" href="#">Apartment</a></li>
+                <li><a class="section-tab__link" href="#">View All</a></li>
               </ul>
             </div>
             </div>
@@ -70,16 +73,18 @@
         </div>
       </div> 
       <div class="container">
-        <div class="row between-xs middle-xs">
+        <div class="row between-xs">
           <div class="col-xs-12 col-md-3">
             <div class="future-home">
               <div class="future-home__content">
-                <h3 id="your-future">Your Future Home</h3>
+                <h3>Your Future Home</h3>
                 <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing eiusmod veniam.</p>
               </div>
-              <div class="fi-btn">
-                <a class="fi-btn__icon" href="#"><i class="fi-xnlrxl-chevron"></i></a>
-                <a class="fi-btn__text" href="#">Get A Future Home</a>
+              <div class="btn--chev">
+                <div class="btn--chev__icon">
+                  <a href="#"><i class="fi-xnlrxl-chevron"></i></a>
+                </div>
+                <a class="btn--chev__link" href="#">Get A Future Home</a>
               </div>
             </div>
           </div>
@@ -87,29 +92,29 @@
           <div class="col-xs-12 col-md-9">
             <div class="row between-xs">
               <div class="col-xs-12 col-sm-4">
-                <a class="house-card" href="#">
-                  <div id="house-card-one" class="house-card__img"></div>
-                  <div class="house-card__content">
-                    <p class="house-card__type">Commercial Retail</p>
-                    <p class="house-card__price">$123,456 USD</p>
+                <a class="card-house" href="#">
+                  <div id="card-house-one" class="card-house__img"></div>
+                  <div class="card-house__content">
+                    <p class="card-house__type">Commercial Retail</p>
+                    <p class="card-house__price">$123,456 USD</p>
                   </div>
                 </a>
               </div>
               <div class="col-xs-12 col-sm-4">
-                <a class="house-card" href="#">
-                  <div id="house-card-two" class="house-card__img"></div>
-                  <div class="house-card__content">
-                    <p class="house-card__type">Commercial Retail</p>
-                    <p class="house-card__price">$123,456 USD</p>
+                <a class="card-house" href="#">
+                  <div id="card-house-two" class="card-house__img"></div>
+                  <div class="card-house__content">
+                    <p class="card-house__type">Commercial Retail</p>
+                    <p class="card-house__price">$123,456 USD</p>
                   </div>
                 </a>
               </div>
               <div class="col-xs-12 col-sm-4">
-                <a class="house-card" href="#">
-                  <div id="house-card-three" class="house-card__img"></div>
-                  <div class="house-card__content">
-                    <p class="house-card__type">Commercial Retail</p>
-                    <p class="house-card__price">$123,456 USD</p>
+                <a class="card-house" href="#">
+                  <div id="card-house-three" class="card-house__img"></div>
+                  <div class="card-house__content">
+                    <p class="card-house__type">Commercial Retail</p>
+                    <p class="card-house__price">$123,456 USD</p>
                   </div>
                 </a>
               </div>
@@ -125,33 +130,34 @@
         <div class="row start-xs">
           <div class="col-xs-12">
             <div class="section-header">
-              <h2 class="header-title" id="featured">Featured</h2>
+              <h2 class="section-title" id="featured">Featured</h2>
             </div>
           </div>
         </div>
+        <!-- FEATURED CARDS --> 
         <div class="row between-xs">
           <div class="col-xs-12 col-sm-4">
-            <div class="homework-card">
-              <i class="fi-xnluxl-house homework-card__icon" id="card__icon--green" aria-hidden="true"></i>
-              <h3 class="homework-card__title">Rent Homework</h3>
+            <div class="card-featured">
+              <i class="fi-xnluxl-house card-featured__icon card__icon--green" aria-hidden="true"></i>
+              <h3 class="card-featured__title">Rent Homework</h3>
               <p class="lorem">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore magna aliqua.</p>
-              <a class="homework-card__link" id="card__link--rent" href="#">View Details</a>
+              <a class="card-featured__link card__link--green" href="#">View Details</a>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="homework-card">
-              <i class="fi-xnluhl-shopping-cart homework-card__icon" id="card__icon--blue" aria-hidden="true"></i>
-              <h3 class="homework-card__title">Buy Homework</h3>
+            <div class="card-featured">
+              <i class="fi-xnluhl-shopping-cart card-featured__icon card__icon--blue" aria-hidden="true"></i>
+              <h3 class="card-featured__title">Buy Homework</h3>
               <p class="lorem">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore magna aliqua.</p>
-              <a class="homework-card__link" id="card__link--buy" href="#">View Details</a>
+              <a class="card-featured__link card__link--blue" href="#">View Details</a>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <div class="homework-card">
-              <i class="fi-xnsuxl-dollar-solid homework-card__icon" id="card__icon--pink" aria-hidden="true"></i>
-              <h3 class="homework-card__title">Sell Homework</h3>
+            <div class="card-featured">
+              <i class="fi-xnsuxl-dollar-solid card-featured__icon card__icon--pink" aria-hidden="true"></i>
+              <h3 class="card-featured__title">Sell Homework</h3>
               <p class="lorem">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore magna aliqua.</p>
-              <a class="homework-card__link" id="card__link--sell" href="#">View Details</a>
+              <a class="card-featured__link card__link--pink" href="#">View Details</a>
             </div>
           </div>
         </div>
@@ -164,7 +170,7 @@
         <div class="row between-xs middle-xs">
           <div class="col-xs-12 col-md-6">
             <div class="pricing__info">
-              <h2 class="header-title header-title--blue" id="pricing">Simple Pricing</h2>
+              <h2 class="section-title section-title--blue" id="pricing">Simple Pricing</h2>
               <div class="pricing__content">
                 <h3>Find Exactly What You Need</h3>
                 <p class="lorem">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore magna aliqua.</p>
@@ -212,9 +218,11 @@
             <div class="testimonials__content">
               <h2 class="testimonials-content__title" id="testimonials">Client Testimonials</h2>
               <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <div class="fi-btn">
-                <a class="fi-btn__icon" href="#"><i class="fi-xnlrxl-chevron"></i></a>
-                <a class="fi-btn__text" href="#">See All</a>
+              <div class="btn--chev">
+                <div class="btn--chev__icon">
+                  <a href="#"><i class="fi-xnlrxl-chevron"></i></a>
+                </div>
+                <a class="btn--chev__link" href="#">Get A Future Home</a>
               </div>
             </div>
           </div>
@@ -237,7 +245,7 @@
         <div class="section-header">
           <div class="row start-xs">
             <div class="col-xs-12">
-              <h2 class="header-title" id="more-information">More Information</h2>
+              <h2 class="section-title" id="more-information">More Information</h2>
             </div>
           </div>
         </div>

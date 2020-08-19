@@ -5,9 +5,13 @@
 /*** variables **/
 :root {
   --green: #25E39A;
+  --light-green: rgba(37, 227, 154, 0.2);
   --green-dark: #26d290;
   --blue: #6DA2FF;
+  --light-blue: rgba(109, 162, 255, 0.2);
   --white: #fff;
+  --pink: #E74D89;
+  --light-pink: rgba(231, 77, 137, 0.2);
   --font-normal: 'proxima_novaregular', sans-serif;
   --font-bold:'proxima_novabold', sans-serif;
   --font-boldx2: 'proxima_novaextrabold', sans-serif;
@@ -66,6 +70,7 @@ h2 {
 
 h3{
   font-size: 1.33rem;
+  margin: 0;
 }
 
 .lorem {
@@ -142,22 +147,27 @@ nav ul li a:active {
 }
 
 /*** nav buttons **/
-.btn__nav--hover {
+.nav-link__hover {
   background-color: none;
   padding: 15px 35px;
   margin: 0px;
   transition: 0.2s;
 }
 
-.btn__nav--hover:hover {
+.nav-link__hover:hover {
   color: var(--green);
 }
 
-#btn__nav {
+.btn__nav-link {
   background-color: var(--green);
   padding: 15px 30px;
   margin: 0px;
   border: none;
+}
+
+.mobile-menu {
+  display: none;
+  color: var(--green);
 }
 
 /********************************************************************************
@@ -240,14 +250,13 @@ h1 {
   margin-bottom: 50px;
 }
 
-/** header title **/
-.header-title {
+.section-title {
   position: relative;
   font-weight: bold;
   padding-bottom: 10px;
 }
 
-.header-title:after {
+.section-title:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -258,163 +267,50 @@ h1 {
   margin: 5px 0;
 }
 
-.header-title--blue:after {
+.section-title--blue:after {
   background-color: var(--blue);
 }
 
-.header__nav {
+.section-tab {
+  display: flex;
+}
+
+.section-tab li {
  display: flex;
  justify-content: flex-end;
  list-style: none;
 }
 
-.header__nav a {
+.section-tab a {
   color: #333E5A;
   opacity: 0.7;
 }
 
-.header__nav a.active {
+.section-tab a.active {
   border-bottom: 5px solid var(--green);
   opacity: 1;
 }
 
-/*** future-home container **/
-.future-home__container {
- display: flex;
- align-items: center;
- justify-content: center;
- margin: 0 auto 150px;
+.section-tab__link {
+  display: inline-block;
+  border-bottom: 5px solid var(--white);
+  padding: 15px 40px;
+  font-size: 1rem;
+  background-color: rgba(51, 62, 90, 0.05);
+}
+
+.section-tab__link:hover {
+  transition: 0.2s;
+  opacity: 1;
 }
 
 .future-home {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
-#your-future {
-  padding: 0 50px 0 0;
-  margin-top: 0;
-}
-
-/** house cards **/
-
-#house-card-one {
-  background-image: url(/images/biliximg4.jpg);
-}
-
-#house-card-two {
-  background-image: url(/images/biliximg5.jpg);
-}
-
-#house-card-three {
-  background-image: url(/images/biliximg6.jpg);
-}
-
-.house-card__img {
-  height: 280px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.house-card {
-  position: relative;
-  margin-right: 15px;
-  transition: all 200ms ease;
-} 
-
-.house-card:hover {
-  transform: translateY(-5px);
-}
-
-.house-card:last-child {
-  margin-right: 0;
-}
-
-.house-card__content {
-  position: absolute;
-  bottom: 0;
-  width: 90%;
-  padding: 10px 5%;
-  z-index: 1;
-  color: var(--white);
-  background-image: linear-gradient( rgba(60, 79, 112, .60), rgba(60, 79, 112, .60));
-}
-
-
-.house-card__type {
-  font-size: 1.22rem;
-  margin: 0 0 5px;
-}
-
-.house-card__price {
-  font-size: 1rem;
-  margin: 0 0 5px;
-}
-
-/*** homework cards **/
-
-.homework-card {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 50px;
-  box-shadow: 0px 20px 75px rgba(0, 0, 0, 0.07);
-}
-
-.homework-card__icon {
-  font-size: 1.77rem;
-  text-align: center;
-  line-height: 75px;
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-}
-
-#card__icon--green {
-  color: var(--green);
-  background-color: rgba(37, 227, 154, 0.2);
-}
-
-#card__icon--blue {
-  color: var(--blue);
-  background-color: rgba(109, 162, 255, 0.2);
-}
-
-#card__icon--pink {
-  color: #E74D89;
-  background-color: rgba(231, 77, 137, 0.2)
-}
-
-.homework-card__link {
-  margin-top:30px;
-  font-size: 1rem;
-}
-
-#card__link--rent,
-#card__link--rent:link,
-#card__link--rent:visited,
-#card__link--rent:hover,
-#card__link--rent:active {
-  color: var(--green);
-}
-
-#card__link--buy,
-#card__link--buy:link,
-#card__link--buy:visited,
-#card__link--buy:hover,
-#card__link--buy:active {
-  color: var(--blue);
-}
-
-#card__link--sell,
-#card__link--sell:link,
-#card__link--sell:visited,
-#card__link--sell:hover,
-#card__link--sell:active {
-  color: #E74D89;
-}
 
 /** simple pricing section **/
 .pricing-section {
@@ -536,6 +432,133 @@ h1 {
 }
 
 /********************************************************************************
+ 4. Cards
+*******************************************************************************/
+/** house cards **/
+
+#card-house-one {
+  background-image: url(/images/biliximg4.jpg);
+}
+
+#card-house-two {
+  background-image: url(/images/biliximg5.jpg);
+}
+
+#card-house-three {
+  background-image: url(/images/biliximg6.jpg);
+}
+
+.card-house__img {
+  height: 280px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-house {
+  display: block;
+  position: relative;
+  margin-right: 15px;
+  transition: all 200ms ease;
+} 
+
+.card-house:hover {
+  transform: translateY(-5px);
+}
+
+.card-house:last-child {
+  margin-right: 0;
+}
+
+.card-house__content {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  padding: 10px 5%;
+  z-index: 1;
+  color: var(--white);
+  background-image: linear-gradient( rgba(60, 79, 112, .60), rgba(60, 79, 112, .60));
+}
+
+
+.card-house__type {
+  font-size: 1.22rem;
+  margin: 0 0 5px;
+}
+
+.card-house__price {
+  font-size: 1rem;
+  margin: 0 0 5px;
+}
+
+/*** homework cards **/
+
+.card-featured {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 50px;
+  box-shadow: 0px 20px 75px rgba(0, 0, 0, 0.07);
+}
+
+.card-featured__icon {
+  font-size: 1.77rem;
+  text-align: center;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+.card-featured__title {
+  margin-top: 20px;
+}
+
+.card__icon--green {
+  color: var(--green);
+  background-color: var(--light-green);
+}
+
+.card__icon--blue {
+  color: var(--blue);
+  background-color: var(--light-blue);
+}
+
+.card__icon--pink {
+  color: var(--pink);
+  background-color: var(--light-pink);
+}
+
+.card-featured__link {
+  margin-top:30px;
+  font-size: 1rem;
+}
+
+.card__link--green,
+.card__link--green:link,
+.card__link--green:visited,
+.card__link--green:hover,
+.card__link--green:active {
+  color: var(--green);
+}
+
+.card__link--blue,
+.card__link--blue:link,
+.card__link--blue:visited,
+.card__link--blue:hover,
+.card__link--blue:active {
+  color: var(--blue);
+}
+
+.card__link--pink,
+.card__link--pink:link,
+.card__link--pink:visited,
+.card__link--pink:hover,
+.card__link--pink:active {
+  color: var(--pink);
+}
+
+/********************************************************************************
  5. Buttons
 *******************************************************************************/
 .btn {
@@ -562,19 +585,29 @@ h1 {
 }
 
 /** fa-btn **/
-.fi-btn {
-  margin-bottom: 8px;
+.btn--chev {
+  display: flex;
+  line-height: 32px;
+  margin-top:;
+  
 }
 
-.fi-btn__icon {
+.btn--chev__icon {
   background-color: var(--green);
-  color: var(--white);
-  padding: 8px 10px;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
 }
 
-.fi-btn__text {
+.btn--chev__icon a {
+  color: var(--white);
+}
+
+.btn--chev__link {
   color: var(--green);
   font-size: 1rem;
+  margin-left: 20px;
 }
 
 /*** hero buttons **/
@@ -591,18 +624,6 @@ h1 {
 }
 
 /*** recently-added section buttons **/
-.btn--secondary {
-  display: inline-block;
-  border-bottom: 5px solid var(--white);
-  padding: 15px 40px;
-  font-size: 1rem;
-  background-color: rgba(51, 62, 90, 0.05);
-}
-
-.btn--secondary:hover {
-  transition: 0.2s;
-  opacity: 1;
-}
 
 /** simple pricing section buttons **/
 .btn--tertiary {
