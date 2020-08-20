@@ -1,7 +1,6 @@
 {
   "name": "bilixhouse",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,9 +15,12 @@
     "url": "https://github.com/Kwordener/BilixHouse/issues"
   },
   "homepage": "https://github.com/Kwordener/BilixHouse#readme",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0"
-  }
+  },
+  "description": ""
 }
