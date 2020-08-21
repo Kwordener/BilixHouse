@@ -5,13 +5,13 @@
   font-size: 1.33rem;
   text-transform: uppercase;
   border: 1px solid transparent;
-  background-color: var(--green);
+  background-color: $green;
   padding: 15px 50px;
   transition: all 150ms ease;
 }
 
 .btn--primary {
-  font-family: var(--font-bold);
+  font-family: $font-bold;
    font-size: 1.33rem;
 }
 
@@ -19,20 +19,20 @@
 .btn--primary:visited,
 .btn--primary:hover,
 .btn--primary:active {
-  color: var(--white);
+  color: $white;
 }
 
 /* button variations */
 .btn--primary-clear {
   background: transparent;
-  border-color: var(--green);
-  color: var(--green);
+  border-color: $green;
+  color: $green;
 }
 
 .btn--primary-clear:hover,
 .btn--primary-clear:active {
-  color: var(--green-dark);
-  border-color: var(--green-dark);
+  color: $dark-green;
+  border-color: $dark-green;
 }
 
 .btn--chev {
@@ -41,7 +41,7 @@
 }
 
 .btn--chev__icon {
-  background-color: var(--green);
+  background-color: $green;
   height: 32px;
   width: 32px;
   line-height: 32px;
@@ -49,47 +49,47 @@
 }
 
 .btn--chev__icon a {
-  color: var(--white);
+  color: $white;
 }
 
 .btn--chev__link {
-  color: var(--green);
+  color: $green;
   font-size: 1rem;
   margin-left: 20px;
 }
 
 .btn--tertiary {
   font-size: 1.33rem;
-  font-family: var(--font-bold);
-  color: var(--white);
+  font-family: $font-bold;
+  color: $white;
   padding: 15px 20px;
-  background-color: var(--blue);
+  background-color: $blue;
   border: none;
 }
 
 .btn--faq {
-  font-family: var(--font-bold);
-  color: var(--white);
+  font-family: $font-bold;
+  color: $white;
   font-size: 1.33rem;
   padding: 10px 60px;
   text-transform: none;
-  border: 1px solid var(--green);
-  background-color: var(--green);
+  border: 1px solid $green;
+  background-color: $green;
 }
 
 .btn--faq:link,
 .btn--faq:visited,
 .btn--faq:hover,
 .btn--faq:active {
-  color: var(--white);
+  color: $white;
 }
 
 .btn--chat {
-  font-family: var(--font-bold);
+  font-family: $font-bold;
   font-size: 1.33rem;
-  color: var(--green);
+  color: $green;
   padding: 10px 78px;
-  border: 1px solid var(--green)
+  border: 1px solid $green
 }
 
 @media only screen and (max-width: 1000px) {

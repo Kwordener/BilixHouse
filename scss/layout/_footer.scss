@@ -1,63 +1,69 @@
 /** Contains global footer styling **/
 
 .footer {
-  background-color: var(--background-shadow);
-  font-family: var(--font-normal);
-  color: var(--white);
+  background-color: $background-shadow;
+  font-family: $font-normal;
+  color: $white;
   padding: 50px 0;
+
+  & ul {
+    list-style: none;
+    color: $off-white;
+    padding: 0;
+    margin: 0;
+    font-size: .8rem;
+  
+    & a:link,
+    & a:visited,
+    & a:hover,
+    & a:active {
+      color: $off-white;
+    }
+  }
+  
+  &-social-media a {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid $off-white;
+  
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $off-white;
+    }
+  }
+  
+  &-logo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px;
+  
+    &__title {
+      font-size: 2.66rem;
+      color: $white;
+    }
+
+    &__title a:link,
+    &__title a:visited,
+    &__title a:hover,
+    &__title a:active {
+      color: #fff;
+    }
+    
+    &--highlight {
+      font-family: $font-bold;
+    }
+  }
 }
 
-.footer-nav ul {
-  list-style: none;
-  color: var(--off-white);
-  padding: 0;
-  margin: 0;
-  font-size: .8rem;
-}
-
-.footer li a:link,
-.footer li a:visited,
-.footer li a:hover,
-.footer li a:active,
-.footer-social-media a:link,
-.footer-social-media a:visited,
-.footer-social-media a:hover,
-.footer-social-media a:active,
 .copyright:link,
 .copyright:visited,
 .copyright:hover,
 .copyright:active {
-  color: var(--off-white);
-}
-
-.footer-social-media a {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 40px;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 2px solid var(--off-white)
-}
-
-.footer__logo {
-  display: flex;
-  flex-direction: column;
-  padding-top: 75px;
-}
-
-.footer-logo__title {
-  font-size: 2.66rem;
-  color: var(--white);
-}
-
-.footer-logo__title a:link,
-.footer-logo__title a:visited,
-.footer-logo__title a:hover,
-.footer-logo__title a:active {
-  color: #fff;
-}
-
-.footer-logo--highlight {
-  font-family: var(--font-bold);
+  color: $off-white;
 }

@@ -7,67 +7,67 @@ header {
 .logo {
   text-decoration: none;
   font-size: 2rem;
-}
 
-.logo:link,
-.logo:visited,
-.logo:hover,
-.logo:active {
-  color: var(--white);
-  text-decoration: none;
-}
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $white;
+    text-decoration: none;
+  }
 
-.logo--highlight {
-  color: var(--green);
+  &--highlight {
+    color: $green;
+  }
 }
 
 nav ul {
   list-style: none;
   font-size: 0;
+
+  & li {
+    display: inline-block;
+    font-size: 0px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  & a {
+    text-decoration: none;
+    font-size: 1rem;
+  
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
 }
 
-nav ul li {
-  display: inline-block;
-  font-size: 0px;
-}
-
-nav ul li:last-child {
-  margin-right: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-nav ul li a:link,
-nav ul li a:visited,
-nav ul li a:hover,
-nav ul li a:active {
-  color: var(--white);
-}
-
-.nav-link__hover {
+.nav-link {
   background-color: none;
   padding: 15px 35px;
   margin: 0px;
   transition: 0.2s;
-}
 
-.nav-link__hover:hover {
-  color: var(--green);
-}
+  &:hover {
+    color: $green;
+  }
 
-.btn__nav-link {
-  background-color: var(--green);
-  padding: 15px 30px;
-  margin: 0px;
-  border: none;
+  &__btn {
+    background-color: $green;
+    padding: 15px 30px;
+    margin: 0px;
+    border: none;
+  }
 }
 
 .mobile-menu {
   display: none;
-  color: var(--green);
+  color: $green;
 }
 
 @media only screen and (max-width: 1200px) {

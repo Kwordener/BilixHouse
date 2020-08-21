@@ -6,10 +6,10 @@
   background-size: cover;
   background-position: center;
   padding: 0 0 1px;
-}
 
-.hero__content {
-  margin: 200px 0
+  &__content {
+    margin: 200px 0
+  }
 }
 
 .future-home {
@@ -19,35 +19,34 @@
   height: 100%;
 }
 
-
 /** simple pricing section **/
-.pricing-section {
+.pricing {
   padding: 75px 0;
   background-color: rgba(162, 228, 255, 0.1);
-}
 
-.pricing__info {
-  display: flex;
-  flex-direction: column;
-  margin-right: 20%;
-}
-
-.pricing__content {
-  margin-top: 80px;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20%;
+  }
+  
+  &__content {
+    margin-top: 80px;
+  }
 }
 
 /** client testamonials section **/
-.testimonials__content {
+.testimonials-content {
  display: flex;
  flex-direction: column;
  justify-content: space-between;
  margin-right: 20%;
  height: 100%;
-}
 
-.testimonials--lorem {
-  padding-top: 0;
-  margin-top: 0;
+ &__lorem {
+    padding-top: 0;
+    margin-top: 0;
+  }
 }
 
 /** more information section **/
@@ -58,10 +57,11 @@
 
 .more-info {
   margin: 50px 0 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
-.more-info__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}

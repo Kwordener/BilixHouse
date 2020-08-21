@@ -5,10 +5,10 @@ html {
 }
 
 body {
-  font-family: var(--font-normal);
+  font-family: $font-normal;
   line-height: 1.4;
   margin: 0px;
-  color: var(--background-shadow);
+  color: $background-shadow;
 }
 
 .container {
@@ -24,13 +24,13 @@ a:active {
 }
 
 h1 {
-  font-family: var(--font-bold);
+  font-family: $font-bold;
   font-size: 4rem;
-  color: var(--white);
+  color: $white;
 }
 
 h2 {
-  font-family: var(--font-bold);
+  font-family: $font-bold;
   font-size: 2rem;
   margin: 0;
 }
@@ -41,7 +41,7 @@ h3 {
 }
 
 .lorem {
-  color:  var(--font-blue);
+  color:  $font-blue;
   word-wrap: normal;
   font-size: 1rem;
   padding-top: 15px;
@@ -69,25 +69,25 @@ h3 {
   position: relative;
   font-weight: bold;
   padding-bottom: 10px;
-}
 
-.section-title:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 5px;
-  width: 55px;
-  background-color: var(--green);
-  margin: 5px 0;
-}
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 55px;
+    background-color: $green;
+    margin: 5px 0;
+  }
 
-.section-title--blue:after {
-  background-color: var(--blue);
-}
+  &--blue:after {
+    background-color: $blue;
+  }
 
-.section-title--none:after {
-  display: none;
+  &--none:after {
+    display: none;
+  }
 }
 
 /** media queries **/
