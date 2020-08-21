@@ -1,0 +1,81 @@
+/** Contains global header styling **/
+
+header {
+  padding: 10px 0;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.logo:link,
+.logo:visited,
+.logo:hover,
+.logo:active {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logo--highlight {
+  color: var(--green);
+}
+
+nav ul {
+  list-style: none;
+  font-size: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 0px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:active {
+  color: var(--white);
+}
+
+.nav-link__hover {
+  background-color: none;
+  padding: 15px 35px;
+  margin: 0px;
+  transition: 0.2s;
+}
+
+.nav-link__hover:hover {
+  color: var(--green);
+}
+
+.btn__nav-link {
+  background-color: var(--green);
+  padding: 15px 30px;
+  margin: 0px;
+  border: none;
+}
+
+.mobile-menu {
+  display: none;
+  color: var(--green);
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}

@@ -1,0 +1,73 @@
+/** Contains navigation and tab styling **/
+
+/** tab menus **/
+.section-tab {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tab-normal {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tab-hidden {
+  display: none;
+}
+
+.section-tab li {
+ display: flex;
+ justify-content: flex-end;
+ list-style: none;
+}
+
+.section-tab a {
+  color: var(--background-shadow);
+  opacity: 0.7;
+}
+
+.section-tab a.active {
+  border-bottom: 5px solid var(--green);
+  opacity: 1;
+}
+
+.section-tab__link {
+  display: inline-block;
+  border-bottom: 5px solid var(--white);
+  padding: 15px 40px;
+  font-size: 1rem;
+  background-color: rgba(51, 62, 90, 0.05);
+}
+
+.section-tab__link:hover {
+  transition: 0.2s;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .section-tab li {
+    display: block;
+    text-align: center;
+  }
+
+  .section-tab__link {
+    display: block;
+    border: none;
+    font-size: 1.4rem;
+  }
+
+  .section-tab a.active {
+    border: none;
+  }
+  
+  .tab-normal {
+    display: none;
+  }
+
+  .tab-hidden {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+}

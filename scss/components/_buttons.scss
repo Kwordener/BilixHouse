@@ -1,12 +1,100 @@
-.test {
-  display: block;
+/** Contains styling for buttons **/
+
+.btn {
+  display: inline-block;
+  font-size: 1.33rem;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  background-color: var(--green);
+  padding: 15px 50px;
+  transition: all 150ms ease;
 }
-.test {
-  display: block;
+
+.btn--primary {
+  font-family: var(--font-bold);
+   font-size: 1.33rem;
 }
-.test {
-  display: block;
+
+.btn--primary:link,
+.btn--primary:visited,
+.btn--primary:hover,
+.btn--primary:active {
+  color: var(--white);
 }
-.test {
-  display: block;
+
+/* button variations */
+.btn--primary-clear {
+  background: transparent;
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.btn--primary-clear:hover,
+.btn--primary-clear:active {
+  color: var(--green-dark);
+  border-color: var(--green-dark);
+}
+
+.btn--chev {
+  display: flex;
+  line-height: 32px;
+}
+
+.btn--chev__icon {
+  background-color: var(--green);
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.btn--chev__icon a {
+  color: var(--white);
+}
+
+.btn--chev__link {
+  color: var(--green);
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+.btn--tertiary {
+  font-size: 1.33rem;
+  font-family: var(--font-bold);
+  color: var(--white);
+  padding: 15px 20px;
+  background-color: var(--blue);
+  border: none;
+}
+
+.btn--faq {
+  font-family: var(--font-bold);
+  color: var(--white);
+  font-size: 1.33rem;
+  padding: 10px 60px;
+  text-transform: none;
+  border: 1px solid var(--green);
+  background-color: var(--green);
+}
+
+.btn--faq:link,
+.btn--faq:visited,
+.btn--faq:hover,
+.btn--faq:active {
+  color: var(--white);
+}
+
+.btn--chat {
+  font-family: var(--font-bold);
+  font-size: 1.33rem;
+  color: var(--green);
+  padding: 10px 78px;
+  border: 1px solid var(--green)
+}
+
+@media only screen and (max-width: 1000px) {
+  .btn {
+    display: block;
+    text-align: center;
+  }
 }

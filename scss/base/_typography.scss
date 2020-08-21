@@ -1,0 +1,111 @@
+/** Contains base structure and global typography **/
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: var(--font-normal);
+  line-height: 1.4;
+  margin: 0px;
+  color: var(--background-shadow);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: var(--font-bold);
+  font-size: 4rem;
+  color: var(--white);
+}
+
+h2 {
+  font-family: var(--font-bold);
+  font-size: 2rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.33rem;
+  margin: 0;
+}
+
+.lorem {
+  color:  var(--font-blue);
+  word-wrap: normal;
+  font-size: 1rem;
+  padding-top: 15px;
+}
+
+/** section-size template **/
+.section-sm {
+  margin-top: 50px;
+}
+
+.section-md {
+  margin-top: 100px
+}
+
+.section-lg {
+  margin-top: 150px;
+}
+
+/** global section headers **/
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  position: relative;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 55px;
+  background-color: var(--green);
+  margin: 5px 0;
+}
+
+.section-title--blue:after {
+  background-color: var(--blue);
+}
+
+.section-title--none:after {
+  display: none;
+}
+
+/** media queries **/
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  .section-header {
+    margin-bottom: 0;
+  }
+}

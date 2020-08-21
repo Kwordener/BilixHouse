@@ -1,0 +1,44 @@
+/** This contains all variables and fonts **/
+
+/*** variables **/
+:root {
+  --green: #25E39A;
+  --light-green: rgba(37, 227, 154, 0.2);
+  --green-dark: #26d290;
+  --blue: #6DA2FF;
+  --light-blue: rgba(109, 162, 255, 0.2);
+  --font-blue: rgba(51, 62, 90, 0.7);
+  --background-shadow: #333E5A;
+  --white: #fff;
+  --off-white: rgba(255, 255, 255, 0.75);
+  --pink: #E74D89;
+  --light-pink: rgba(231, 77, 137, 0.2);
+  --font-normal: 'proxima_novaregular', sans-serif;
+  --font-bold:'proxima_novabold', sans-serif;
+  --font-boldx2: 'proxima_novaextrabold', sans-serif;
+}
+
+/*** fonts **/
+@font-face {
+  font-family: 'proxima_novaregular';
+  src: url('fonts/proximanova-regular-webfont.woff2') format('woff2'),
+       url('fonts/proximanova-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novabold';
+  src: url('fonts/proxima_nova_bold-webfont.woff2') format('woff2'),
+       url('fonts/proxima_nova_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novaextrabold';
+  src: url('fonts/proxima_nova_extrabold-webfont.woff2') format('woff2'),
+       url('fonts/proxima_nova_extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
