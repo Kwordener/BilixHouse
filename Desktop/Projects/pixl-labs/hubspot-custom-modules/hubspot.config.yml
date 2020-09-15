@@ -1,0 +1,12 @@
+defaultPortal: Pixl_Labs
+portals:
+  - name: Pixl_Labs
+    portalId: 8119038
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          CJHDuKHJLhIEAA0ABBj-xe8DILjXuAUo7ukMMhkAkLtTYS5IK_AANN4WfvSEU9Vbz-XAqZUyOhwAAARBAAAAeAAAAAAAAAAAgAAAAAAAAAQAAMAHQhkAkLtTYVAUJBwbSpkibws-T-ZonQT5JLGH
+        expiresAt: '2020-09-15T23:51:25.337Z'
+    personalAccessKey: >-
+      CiQ1OTBmYmNlYi1kMTRjLTQ4NDItOTFhOC04OGVkZmJkMGE2ZDUQ_sXvAxi417gFKhkABeaRgitlQYbKH2n2AmfDxWDLDZiI6Nmg

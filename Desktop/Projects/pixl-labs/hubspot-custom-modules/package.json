@@ -1,0 +1,22 @@
+{
+  "name": "pixl_labs",
+  "version": "1.0.0",
+  "description": "HubSpot Custom Modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fetch": "hs fetch Pixl_Labs --overwrite",
+    "upload": "hs upload hubspot-custom-modules Pixl_Labs",
+    "watch": "hs watch hubspot-custom-modules Pixl_Labs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pixl-Labs/hubspot-custom-modules.git"
+  },
+  "author": "Joshua Todd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pixl-Labs/hubspot-custom-modules/issues"
+  },
+  "homepage": "https://github.com/Pixl-Labs/hubspot-custom-modules#readme"
+}
